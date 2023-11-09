@@ -1,0 +1,11 @@
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\LoudVoice.Domain\bin\Debug\net7.0\LoudVoice.Domain.deps.json
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\LoudVoice.Domain\bin\Debug\net7.0\LoudVoice.Domain.dll
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\LoudVoice.Domain\bin\Debug\net7.0\LoudVoice.Domain.pdb
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\LoudVoice.Domain\obj\Debug\net7.0\LoudVoice.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\LoudVoice.Domain\obj\Debug\net7.0\LoudVoice.Domain.AssemblyInfoInputs.cache
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\LoudVoice.Domain\obj\Debug\net7.0\LoudVoice.Domain.AssemblyInfo.cs
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\LoudVoice.Domain\obj\Debug\net7.0\LoudVoice.Domain.csproj.CoreCompileInputs.cache
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\LoudVoice.Domain\obj\Debug\net7.0\LoudVoice.Domain.dll
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\LoudVoice.Domain\obj\Debug\net7.0\refint\LoudVoice.Domain.dll
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\LoudVoice.Domain\obj\Debug\net7.0\LoudVoice.Domain.pdb
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\LoudVoice.Domain\obj\Debug\net7.0\ref\LoudVoice.Domain.dll
