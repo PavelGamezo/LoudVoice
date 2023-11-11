@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Common\Authentications\" />
+    <ProjectReference Include="..\LoudVoice.Domain\LoudVoice.Domain.csproj" />
   </ItemGroup>
 
 </Project>

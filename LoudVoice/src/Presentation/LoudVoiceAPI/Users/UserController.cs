@@ -20,7 +20,8 @@ namespace LoudVoiceAPI.Users
         public async Task<IActionResult> LoginUser(
             [FromBody] LoginUserRequest request)
         {
-            var tokenResult = _mediator.Send();
+            //var tokenResult = _mediator.Send();
         }
     }
 }
+
