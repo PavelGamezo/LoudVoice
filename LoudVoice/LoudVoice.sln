@@ -7,9 +7,54 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{768CA85C-CB7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{0A110964-7DAC-49D3-AADB-FF29EEEA749B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{BBBC1314-D564-47E5-BCD1-5DF19CA3D243}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{0293A819-3010-4299-85F4-9356A12AE5C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{C142FFD7-5E66-4B38-88BB-D645D761CC84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoudVoice.Domain", "src\Core\LoudVoice.Domain\LoudVoice.Domain.csproj", "{E65495D8-F888-4840-BDB0-977B86812787}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoudVoice.Application", "src\Core\LoudVoice.Application\LoudVoice.Application.csproj", "{CD2760FF-5953-4702-ABB6-627B74AAA3BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoudVoice.Infrastructure", "src\Infrastructure\LoudVoice.Infrastructure\LoudVoice.Infrastructure.csproj", "{780D6059-CF67-4A4F-9DE8-D8D2B79FF583}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoudVoiceUI", "src\Presentation\LoudVoiceUI\LoudVoiceUI.csproj", "{5C6569FF-E602-492F-B8C1-B8E0F9F98674}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E65495D8-F888-4840-BDB0-977B86812787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E65495D8-F888-4840-BDB0-977B86812787}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E65495D8-F888-4840-BDB0-977B86812787}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E65495D8-F888-4840-BDB0-977B86812787}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD2760FF-5953-4702-ABB6-627B74AAA3BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD2760FF-5953-4702-ABB6-627B74AAA3BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD2760FF-5953-4702-ABB6-627B74AAA3BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD2760FF-5953-4702-ABB6-627B74AAA3BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{780D6059-CF67-4A4F-9DE8-D8D2B79FF583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{780D6059-CF67-4A4F-9DE8-D8D2B79FF583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{780D6059-CF67-4A4F-9DE8-D8D2B79FF583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{780D6059-CF67-4A4F-9DE8-D8D2B79FF583}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C6569FF-E602-492F-B8C1-B8E0F9F98674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C6569FF-E602-492F-B8C1-B8E0F9F98674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C6569FF-E602-492F-B8C1-B8E0F9F98674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C6569FF-E602-492F-B8C1-B8E0F9F98674}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BBBC1314-D564-47E5-BCD1-5DF19CA3D243} = {768CA85C-CB7D-4356-8929-C370E07407ED}
+		{0293A819-3010-4299-85F4-9356A12AE5C9} = {768CA85C-CB7D-4356-8929-C370E07407ED}
+		{C142FFD7-5E66-4B38-88BB-D645D761CC84} = {768CA85C-CB7D-4356-8929-C370E07407ED}
+		{E65495D8-F888-4840-BDB0-977B86812787} = {BBBC1314-D564-47E5-BCD1-5DF19CA3D243}
+		{CD2760FF-5953-4702-ABB6-627B74AAA3BC} = {BBBC1314-D564-47E5-BCD1-5DF19CA3D243}
+		{780D6059-CF67-4A4F-9DE8-D8D2B79FF583} = {0293A819-3010-4299-85F4-9356A12AE5C9}
+		{5C6569FF-E602-492F-B8C1-B8E0F9F98674} = {C142FFD7-5E66-4B38-88BB-D645D761CC84}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A1EF4610-B42A-4DE8-9B89-BF91D5F9A0FD}
