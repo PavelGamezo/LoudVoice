@@ -15,4 +15,9 @@
     <ProjectReference Include="..\LoudVoice.Domain\LoudVoice.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Common\Behaviours\" />
+    <Folder Include="User\Commands\DeleteUser\" />
+  </ItemGroup>
+
 </Project>

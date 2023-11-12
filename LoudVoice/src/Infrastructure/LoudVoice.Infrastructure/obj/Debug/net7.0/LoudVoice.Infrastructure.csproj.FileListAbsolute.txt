@@ -1,0 +1,17 @@
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrastructure\LoudVoice.Infrastructure\bin\Debug\net7.0\LoudVoice.Infrastructure.deps.json
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrastructure\LoudVoice.Infrastructure\bin\Debug\net7.0\LoudVoice.Infrastructure.dll
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrastructure\LoudVoice.Infrastructure\bin\Debug\net7.0\LoudVoice.Infrastructure.pdb
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrastructure\LoudVoice.Infrastructure\bin\Debug\net7.0\LoudVoice.Application.dll
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrastructure\LoudVoice.Infrastructure\bin\Debug\net7.0\LoudVoice.Domain.dll
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrastructure\LoudVoice.Infrastructure\bin\Debug\net7.0\LoudVoice.Application.pdb
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrastructure\LoudVoice.Infrastructure\bin\Debug\net7.0\LoudVoice.Domain.pdb
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrastructure\LoudVoice.Infrastructure\obj\Debug\net7.0\LoudVoice.Infrastructure.csproj.AssemblyReference.cache
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrastructure\LoudVoice.Infrastructure\obj\Debug\net7.0\LoudVoice.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrastructure\LoudVoice.Infrastructure\obj\Debug\net7.0\LoudVoice.Infrastructure.AssemblyInfoInputs.cache
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrastructure\LoudVoice.Infrastructure\obj\Debug\net7.0\LoudVoice.Infrastructure.AssemblyInfo.cs
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrastructure\LoudVoice.Infrastructure\obj\Debug\net7.0\LoudVoice.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrastructure\LoudVoice.Infrastructure\obj\Debug\net7.0\LoudVoice.Infrastructure.csproj.CopyComplete
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrastructure\LoudVoice.Infrastructure\obj\Debug\net7.0\LoudVoice.Infrastructure.dll
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrastructure\LoudVoice.Infrastructure\obj\Debug\net7.0\refint\LoudVoice.Infrastructure.dll
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrastructure\LoudVoice.Infrastructure\obj\Debug\net7.0\LoudVoice.Infrastructure.pdb
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrastructure\LoudVoice.Infrastructure\obj\Debug\net7.0\ref\LoudVoice.Infrastructure.dll
