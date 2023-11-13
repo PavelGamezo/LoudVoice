@@ -4,7 +4,6 @@ using LoudVoice.Application.Common.Cqrs.Queries;
 using LoudVoice.Application.Common.DTOs;
 using LoudVoice.Application.Common.Errors;
 using LoudVoice.Application.Common.Persistance;
-using LoudVoice.Application.User.Commands.RegisterUser;
 using LoudVoice.Application.User.Queries.Login;
 using LoudVoice.Domain.Users.Factories;
 
@@ -26,7 +25,8 @@ namespace LoudVoice.Application.User.Queries.LoginUser
 
         public async Task<Result<UserDto>> Handle(LoginUserQuery request, CancellationToken cancellationToken)
         {
-            if(_userRepository.GetUserByEmailAsync(request.Email).Result is not Domain.Users.Entity.User user)
+            if(_userRepository.GetUserByEmailAsync(
+                request.Email, cancellationToken).Result is not Domain.Users.Entity.User user)
             {
                 return Result.Fail(new UserDoesntExistError());
             }

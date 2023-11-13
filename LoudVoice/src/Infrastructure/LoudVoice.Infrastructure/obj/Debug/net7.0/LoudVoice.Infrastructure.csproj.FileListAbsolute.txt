@@ -15,3 +15,5 @@ D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrast
 D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrastructure\LoudVoice.Infrastructure\obj\Debug\net7.0\refint\LoudVoice.Infrastructure.dll
 D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrastructure\LoudVoice.Infrastructure\obj\Debug\net7.0\LoudVoice.Infrastructure.pdb
 D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrastructure\LoudVoice.Infrastructure\obj\Debug\net7.0\ref\LoudVoice.Infrastructure.dll
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrastructure\LoudVoice.Infrastructure\bin\Debug\net7.0\LoudVoice.Infrastructure.runtimeconfig.json
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Infrastructure\LoudVoice.Infrastructure\obj\Debug\net7.0\LoudVoice.Infrastructure.genruntimeconfig.cache

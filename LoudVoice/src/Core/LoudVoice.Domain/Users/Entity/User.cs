@@ -15,5 +15,10 @@ namespace LoudVoice.Domain.Users.Entity
             Email = email;
             Password = password;
         }
+
+        private User(Guid id) : base(id)
+        {
+
+        }
     }
 }

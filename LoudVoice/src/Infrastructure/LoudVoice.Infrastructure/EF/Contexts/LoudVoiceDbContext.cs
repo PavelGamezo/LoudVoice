@@ -1,4 +1,5 @@
 ﻿using LoudVoice.Domain.Users.Entity;
+using LoudVoice.Infrastructure.EF.Configurations;
 using Microsoft.EntityFrameworkCore;
 
 namespace LoudVoice.Infrastructure.EF.Contexts
@@ -13,6 +14,10 @@ namespace LoudVoice.Infrastructure.EF.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            var userConfiguration = new UserDbConfiguration();
+
+            modelBuilder.ApplyConfiguration(userConfiguration);
+
             base.OnModelCreating(modelBuilder);
         }
     }

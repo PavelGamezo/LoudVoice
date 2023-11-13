@@ -30,7 +30,8 @@ namespace LoudVoice.Application.User.Commands.RegisterUser
             // Check if user already exist
             var (login, email, password) = request;
 
-            if (_userRepository.GetUserByEmailAsync(email).Result is not null)
+            if (_userRepository.GetUserByEmailAsync(
+                email, cancellationToken).Result is not null)
             {
                 return Result.Fail(new UserAlreadyExistError());
             }
@@ -40,7 +41,7 @@ namespace LoudVoice.Application.User.Commands.RegisterUser
 
             var user = _userFactory.Create(userId, login, email, password);
 
-            await _userRepository.AddAsync(user);
+            await _userRepository.AddAsync(user, cancellationToken);
 
             // Generate and send jwt token
             var token = _jwtTokenGenerator.GenerateToken(user);

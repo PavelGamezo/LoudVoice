@@ -13,7 +13,7 @@ namespace LoudVoice.Domain.Users.ValueObjects
             Value = value;
         }
 
-        public Result<Login> Create(string login)
+        public static Result<Login> Create(string login)
         {
             if (string.IsNullOrEmpty(login))
             {

@@ -2,7 +2,7 @@
 
 namespace LoudVoice.Application.Common.Errors
 {
-    public class UserDontExistError : IError
+    public class UserDoesntExistError : IError
     {
         public List<IError> Reasons => throw new NotImplementedException();
 

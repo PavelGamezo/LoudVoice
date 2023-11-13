@@ -1,5 +1,7 @@
 ﻿using LoudVoice.Application.Common.Persistance;
 using LoudVoice.Domain.Users.Entity;
+using LoudVoice.Infrastructure.EF.Contexts;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,25 +13,40 @@ namespace LoudVoice.Infrastructure.EF.Repositories
     public class UserRepository : IUserRepository
     {
         private readonly LoudVoiceDbContext _dbContext;
+        private readonly DbSet<User> _users;
 
-        public Task AddAsync(User user)
+        public UserRepository(LoudVoiceDbContext dbContext)
         {
-            throw new NotImplementedException();
+            _dbContext = dbContext;
+            _users = _dbContext.Users;
         }
 
-        public Task DeleteAsync(User user)
+        public async Task AddAsync(User user, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            await _users.AddAsync(user, cancellationToken);
+            await SaveAsync(cancellationToken);
         }
 
-        public Task<User> GetAsync(Guid id)
+        public async Task DeleteAsync(User user, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            _users.Remove(user);
+            await SaveAsync(cancellationToken);
         }
 
-        public Task UpdateAsync(User user)
+        public Task<User> GetUserByEmailAsync(string email, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return _users.SingleOrDefaultAsync(user => user.Email == email);
+        }
+
+        public async Task SaveAsync(CancellationToken cancellationToken)
+        {
+            await _dbContext.SaveChangesAsync(cancellationToken);
+        }
+
+        public async Task UpdateAsync(User user, CancellationToken cancellationToken)
+        {
+            _users.Update(user);
+            await SaveAsync(cancellationToken);
         }
     }
 }
