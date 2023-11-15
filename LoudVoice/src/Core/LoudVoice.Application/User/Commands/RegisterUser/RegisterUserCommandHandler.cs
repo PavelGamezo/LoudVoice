@@ -1,15 +1,15 @@
-﻿using FluentResults;
+﻿using ErrorOr;
+using FluentResults;
 using LoudVoice.Application.Common.Authentications;
 using LoudVoice.Application.Common.Cqrs.Commands;
 using LoudVoice.Application.Common.DTOs;
 using LoudVoice.Application.Common.Errors;
 using LoudVoice.Application.Common.Persistance;
-using LoudVoice.Domain.Users.Entity;
 using LoudVoice.Domain.Users.Factories;
 
 namespace LoudVoice.Application.User.Commands.RegisterUser
 {
-    public class RegisterUserCommandHandler : ICommandHandler<RegisterUserCommand, Result<UserDto>>
+    public class RegisterUserCommandHandler : ICommandHandler<RegisterUserCommand, ErrorOr<UserDto>>
     {
         private readonly IUserFactory _userFactory;
         private readonly IUserRepository _userRepository;
@@ -25,7 +25,7 @@ namespace LoudVoice.Application.User.Commands.RegisterUser
             _jwtTokenGenerator = jwtTokenGenerator;
         }
 
-        public async Task<Result<UserDto>> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
+        public async Task<ErrorOr<UserDto>> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
         {
             // Check if user already exist
             var (login, email, password) = request;
@@ -33,7 +33,7 @@ namespace LoudVoice.Application.User.Commands.RegisterUser
             if (_userRepository.GetUserByEmailAsync(
                 email, cancellationToken).Result is not null)
             {
-                return Result.Fail(new UserAlreadyExistError());
+                return ApplicationErrors.UserExist;
             }
 
             // Create new user account

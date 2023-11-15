@@ -1,4 +1,5 @@
-﻿using FluentResults;
+﻿using ErrorOr;
+using FluentResults;
 using LoudVoice.Domain.Common;
 using LoudVoice.Domain.Users.Errors;
 using System;
@@ -18,11 +19,11 @@ namespace LoudVoice.Domain.Users.ValueObjects
             Value = value;
         }
 
-        public static Result<Password> Create(string password) 
+        public static ErrorOr<Password> Create(string password) 
         {
             if (string.IsNullOrEmpty(password))
             {
-                return Result.Fail<Password>(new EmptyPasswordError());
+                return DomainErrors.EmptyPassword;
             }
 
             return new Password(password);

@@ -1,11 +1,7 @@
-﻿using FluentResults;
+﻿using ErrorOr;
 using LoudVoice.Application.Common.Cqrs.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
+using LoudVoice.Application.Common.DTOs;
+using MediatR;
 
 namespace LoudVoice.Application.User.Commands.DeleteUser
 {
@@ -13,5 +9,5 @@ namespace LoudVoice.Application.User.Commands.DeleteUser
         Guid UserId, 
         string Login, 
         string Email, 
-        string Password) : ICommand<Result>;
+        string Password) : ICommand<ErrorOr<Unit>>;
 }

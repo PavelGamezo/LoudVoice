@@ -1,4 +1,6 @@
-﻿using LoudVoice.Application.User.Commands.RegisterUser;
+﻿using ErrorOr;
+using LoudVoice.Application.Common.DTOs;
+using LoudVoice.Application.User.Commands.RegisterUser;
 using LoudVoice.Application.User.Queries.Login;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -16,34 +18,41 @@ namespace LoudVoiceAPI.Users
             _mediator = mediator;
         }
 
-        [Route("")]
+
+        /// <summary>
+        /// Login user
+        /// </summary>
+        /// <returns></returns>
+        [Route("Login")]
         [HttpGet]
         public async Task<IActionResult> LoginUser(
-            [FromBody] LoginUserRequest request)
+            [FromQuery] LoginUserRequest request)
         {
-            var tokenResult = await _mediator.Send(new LoginUserQuery(request.login, request.email, request.password));
+            ErrorOr<UserDto> loginResult = await _mediator.Send(new LoginUserQuery(request.login,
+                                                                                   request.email,
+                                                                                   request.password));
 
-            if (tokenResult is not null && tokenResult.IsSuccess)
-            {
-                return Ok(tokenResult.Value);
-            }
-
-            return BadRequest(tokenResult);
+            return loginResult.Match(
+                loginResultValue => Ok(loginResultValue), 
+                errors => Problem(statusCode: StatusCodes.Status401Unauthorized, title: errors.First().Description));
         }
 
-        [Route("")]
+        /// <summary>
+        /// Register user
+        /// </summary>
+        /// <returns></returns>
+        [Route("Register")]
         [HttpPost]
         public async Task<IActionResult> RegisterUser(
             [FromBody] RegisterUserRequest request)
         {
-            var registerResult = await _mediator.Send(new RegisterUserCommand(request.Login, request.Email, request.Password));
+            ErrorOr<UserDto> registerResult = await _mediator.Send(new RegisterUserCommand(request.Login,
+                                                                                           request.Email,
+                                                                                           request.Password));
 
-            if (registerResult is not null && registerResult.IsSuccess)
-            {
-                return Ok();
-            }
-
-            return BadRequest(registerResult);
+            return registerResult.Match(
+                registerResultValue => Ok(registerResultValue),
+                errors => Problem(statusCode: StatusCodes.Status401Unauthorized, title: errors.First().Description));
         }
     }
 }

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Ffs/ttnxvVhXZ80O7wLpNy3OzWG/0CiHPeGeYMhIjn+vpGX4Q4mGAXiTRw8tpn2AspNl6kRxWKZSBKGlDoYDUw==",
+  "dgSpecHash": "SCWzplBxD1ZBm8wwRanZAbkaO6jj+H8O5sfU7uA/j/cT2WrRI++KJmEfU5YvSakcN7a/gwc/ruM7Q1Y5ixXpRA==",
   "success": true,
   "projectFilePath": "D:\\Программирование\\Pet-projects\\LoudVoice\\LoudVoice\\src\\Presentation\\LoudVoiceAPI\\LoudVoiceAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\erroror\\1.3.0\\erroror.1.3.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\fluentresults\\3.15.2\\fluentresults.3.15.2.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",

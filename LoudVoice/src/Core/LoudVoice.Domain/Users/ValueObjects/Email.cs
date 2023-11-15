@@ -1,4 +1,5 @@
-﻿using FluentResults;
+﻿using ErrorOr;
+using FluentResults;
 using LoudVoice.Domain.Common;
 using LoudVoice.Domain.Users.Errors;
 using System;
@@ -18,11 +19,11 @@ namespace LoudVoice.Domain.Users.ValueObjects
             Value = value;
         }
 
-        public static Result<Email> Create(string email)
+        public static ErrorOr<Email> Create(string email)
         {
             if (string.IsNullOrEmpty(email)) 
             {
-                return Result.Fail<Email>(new EmptyEmailError());
+                return DomainErrors.EmptyEmail;
             }
 
             return new Email(email);

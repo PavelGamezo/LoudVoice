@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "DCrdKj/ntGJ790GLBQPiLjOjx7KH0UNjK97o5PHYRJWVSy7UyTKGwjWQgkYKN6495adeKfottomMBLsR+h3J0A==",
+  "dgSpecHash": "AIOKAIfpeNOyZNyhjwn2+6LUGGWlVRP/oSJfDQYSd6zAi2UDt55Sq+9LIgCsPeOh3eFQx5dUHMoIWMN3LKiS3Q==",
   "success": true,
   "projectFilePath": "D:\\Программирование\\Pet-projects\\LoudVoice\\LoudVoice\\src\\Core\\LoudVoice.Application\\LoudVoice.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Lenovo\\.nuget\\packages\\erroror\\1.3.0\\erroror.1.3.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\fluentresults\\3.15.2\\fluentresults.3.15.2.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

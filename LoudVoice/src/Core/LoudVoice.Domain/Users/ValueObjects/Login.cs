@@ -1,4 +1,5 @@
-﻿using FluentResults;
+﻿using ErrorOr;
+using FluentResults;
 using LoudVoice.Domain.Common;
 using LoudVoice.Domain.Users.Errors;
 
@@ -13,11 +14,11 @@ namespace LoudVoice.Domain.Users.ValueObjects
             Value = value;
         }
 
-        public static Result<Login> Create(string login)
+        public static ErrorOr<Login> Create(string login)
         {
             if (string.IsNullOrEmpty(login))
             {
-                return Result.Fail<Login>(new EmptyLoginError());
+                return DomainErrors.EmptyLogin;
             }
 
             return new Login(login);
