@@ -5,7 +5,6 @@ using LoudVoice.Application.Common.DTOs;
 using LoudVoice.Application.Common.Errors;
 using LoudVoice.Application.Common.Persistance;
 using LoudVoice.Application.User.Queries.Login;
-using LoudVoice.Domain.Users.Factories;
 
 namespace LoudVoice.Application.User.Queries.LoginUser
 {
@@ -16,8 +15,7 @@ namespace LoudVoice.Application.User.Queries.LoginUser
 
         public LoginUserQueryHandler(
             IUserRepository userRepository,
-            IJwtTokenGenerator jwtTokenGenerator,
-            IUserFactory userFactory)
+            IJwtTokenGenerator jwtTokenGenerator)
         {
             _userRepository = userRepository;
             _jwtTokenGenerator = jwtTokenGenerator;
@@ -25,13 +23,11 @@ namespace LoudVoice.Application.User.Queries.LoginUser
 
         public async Task<ErrorOr<UserDto>> Handle(LoginUserQuery request, CancellationToken cancellationToken)
         {
-            if(_userRepository.GetUserByEmailAsync(
-                request.Email, cancellationToken).Result is not Domain.Users.Entity.User user)
-            {
-                return ApplicationErrors.UserNotFound;
-            }
+            await Task.CompletedTask;
 
-            if (user.Login != request.Login || user.Password != request.Password)
+            if (_userRepository.GetUserByLoginAsync(
+                request.Login, cancellationToken).Result is not Domain.Users.Entity.User user ||
+                user.Login != request.Login || user.Password != request.Password)
             {
                 return ApplicationErrors.InvalidAuthentication;
             }

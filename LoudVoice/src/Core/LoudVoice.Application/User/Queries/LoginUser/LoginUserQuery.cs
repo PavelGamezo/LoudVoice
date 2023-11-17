@@ -4,5 +4,5 @@ using LoudVoice.Application.Common.DTOs;
 
 namespace LoudVoice.Application.User.Queries.Login
 {
-    public record LoginUserQuery(string Login, string Email, string Password) : IQuery<ErrorOr<UserDto>>;
+    public record LoginUserQuery(string Login, string Password) : IQuery<ErrorOr<UserDto>>;
 }

@@ -33,10 +33,11 @@ namespace LoudVoice.Infrastructure.EF.Repositories
             await SaveAsync(cancellationToken);
         }
 
-        public Task<User> GetUserByEmailAsync(string email, CancellationToken cancellationToken)
-        {
-            return _users.SingleOrDefaultAsync(user => user.Email == email);
-        }
+        public async Task<User?> GetUserByEmailAsync(string email, CancellationToken cancellationToken) =>
+            await _users.SingleOrDefaultAsync(user => user.Email == email);
+
+        public async Task<User?> GetUserByLoginAsync(string login, CancellationToken cancellationToken) =>
+            await _users.SingleOrDefaultAsync(user => user.Login == login);
 
         public async Task SaveAsync(CancellationToken cancellationToken)
         {

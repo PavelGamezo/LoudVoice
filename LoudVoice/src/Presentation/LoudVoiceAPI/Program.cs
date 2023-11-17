@@ -1,12 +1,12 @@
 using LoudVoice.Application;
 using LoudVoice.Infrastructure;
+using LoudVoiceAPI;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
-
+builder.Services.AddPresentation();
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(
     builder.Configuration, 

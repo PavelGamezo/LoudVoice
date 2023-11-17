@@ -1,12 +1,10 @@
 ﻿using LoudVoice.Application.Common.Authentications;
 using LoudVoice.Application.Common.Services;
 using LoudVoice.Domain.Users.Entity;
-using LoudVoice.Domain.Users.ValueObjects;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-using System.Security.Principal;
 using System.Text;
 
 namespace LoudVoice.Infrastructure.Authentications

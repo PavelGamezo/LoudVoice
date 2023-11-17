@@ -2,6 +2,7 @@
 using LoudVoice.Application.Common.DTOs;
 using LoudVoice.Application.User.Commands.RegisterUser;
 using LoudVoice.Application.User.Queries.Login;
+using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,11 +12,13 @@ namespace LoudVoiceAPI.Users
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly IMediator _mediator;
+        private readonly ISender _mediator;
+        private readonly IMapper _mapper;
 
-        public UserController(IMediator mediator)
+        public UserController(ISender mediator, IMapper mapper)
         {
             _mediator = mediator;
+            _mapper = mapper;
         }
 
 
@@ -28,9 +31,8 @@ namespace LoudVoiceAPI.Users
         public async Task<IActionResult> LoginUser(
             [FromQuery] LoginUserRequest request)
         {
-            ErrorOr<UserDto> loginResult = await _mediator.Send(new LoginUserQuery(request.login,
-                                                                                   request.email,
-                                                                                   request.password));
+            var command = _mapper.Map<LoginUserQuery>(request);
+            ErrorOr<UserDto> loginResult = await _mediator.Send(command);
 
             return loginResult.Match(
                 loginResultValue => Ok(loginResultValue), 

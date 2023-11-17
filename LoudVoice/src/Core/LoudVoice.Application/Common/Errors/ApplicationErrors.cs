@@ -15,7 +15,7 @@ namespace LoudVoice.Application.Common.Errors
 
         public static readonly Error UserExist = Error.Conflict(
             code: "Application.UserExist",
-            description: "User with entered email has already exist");
+            description: "User with entered data has already exist");
 
         public static readonly Error UserNotFound = Error.NotFound(
             code: "Application.UserNotFound",

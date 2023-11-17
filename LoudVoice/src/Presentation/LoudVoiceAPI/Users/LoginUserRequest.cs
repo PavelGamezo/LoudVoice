@@ -1,4 +1,4 @@
 ﻿namespace LoudVoiceAPI.Users
 {
-    public record LoginUserRequest(string login, string email, string password);
+    public record LoginUserRequest(string Login, string Password);
 }

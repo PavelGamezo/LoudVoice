@@ -31,7 +31,9 @@ namespace LoudVoice.Application.User.Commands.RegisterUser
             var (login, email, password) = request;
 
             if (_userRepository.GetUserByEmailAsync(
-                email, cancellationToken).Result is not null)
+                email, cancellationToken).Result is not null &&
+                _userRepository.GetUserByLoginAsync(
+                login, cancellationToken).Result is not null)
             {
                 return ApplicationErrors.UserExist;
             }
