@@ -31,8 +31,8 @@ namespace LoudVoiceAPI.Users
         public async Task<IActionResult> LoginUser(
             [FromQuery] LoginUserRequest request)
         {
-            var command = _mapper.Map<LoginUserQuery>(request);
-            ErrorOr<UserDto> loginResult = await _mediator.Send(command);
+            var query = _mapper.Map<LoginUserQuery>(request);
+            ErrorOr<UserDto> loginResult = await _mediator.Send(query);
 
             return loginResult.Match(
                 loginResultValue => Ok(loginResultValue), 
@@ -48,9 +48,8 @@ namespace LoudVoiceAPI.Users
         public async Task<IActionResult> RegisterUser(
             [FromBody] RegisterUserRequest request)
         {
-            ErrorOr<UserDto> registerResult = await _mediator.Send(new RegisterUserCommand(request.Login,
-                                                                                           request.Email,
-                                                                                           request.Password));
+            var command = _mapper.Map<RegisterUserCommand>(request);
+            ErrorOr<UserDto> registerResult = await _mediator.Send(command);
 
             return registerResult.Match(
                 registerResultValue => Ok(registerResultValue),

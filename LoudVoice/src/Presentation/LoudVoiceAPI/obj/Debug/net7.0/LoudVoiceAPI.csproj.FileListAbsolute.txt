@@ -88,3 +88,6 @@ D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Present
 D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Presentation\LoudVoiceAPI\bin\Debug\net7.0\Mapster.dll
 D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Presentation\LoudVoiceAPI\bin\Debug\net7.0\Mapster.Core.dll
 D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Presentation\LoudVoiceAPI\bin\Debug\net7.0\Mapster.DependencyInjection.dll
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Presentation\LoudVoiceAPI\bin\Debug\net7.0\FluentValidation.dll
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Presentation\LoudVoiceAPI\bin\Debug\net7.0\FluentValidation.AspNetCore.dll
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Presentation\LoudVoiceAPI\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
