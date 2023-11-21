@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Lg8UmpK/e6XA3TGO6CTBSjqBB6qf3azpl6APlc2KBcFXoRxSvTLtboJ8Lnyct0WnQkI/cxivJrHQtD4xqqm0NA==",
+  "dgSpecHash": "1BWi0FlR4IL8u0vDKD1EG3Bc0eS8xnf44M5BXQ/GJJ/Q9oFcDfEdTabHByEt04qWxZpSXwM1L6AjgluHcmG5oA==",
   "success": true,
   "projectFilePath": "D:\\Программирование\\Pet-projects\\LoudVoice\\LoudVoice\\src\\Presentation\\LoudVoiceAPI\\LoudVoiceAPI.csproj",
   "expectedPackageFiles": [
@@ -18,6 +18,7 @@
     "C:\\Users\\Lenovo\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.14\\microsoft.aspnetcore.authentication.jwtbearer.7.0.14.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.13\\microsoft.aspnetcore.openapi.7.0.13.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",

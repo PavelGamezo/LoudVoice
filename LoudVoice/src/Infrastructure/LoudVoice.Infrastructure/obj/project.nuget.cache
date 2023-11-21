@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "aLUnOSNGMch/B4N6rDP+sprX7iwP8fzIefDPHt+uzkiRc1O2gAmPDY8OBx4MUonDttg3NR2qMz+D1Im919ZAow==",
+  "dgSpecHash": "/Jg6aKBnD+RFNH2M0T+bM3nKHW7/uVy1lJ8ioVCggr9P/C+1tCmV7p6lo9mmAUVpqT1Bnwy+SLCaIxwbty2mkg==",
   "success": true,
   "projectFilePath": "D:\\Программирование\\Pet-projects\\LoudVoice\\LoudVoice\\src\\Infrastructure\\LoudVoice.Infrastructure\\LoudVoice.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\Lenovo\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.14\\microsoft.aspnetcore.authentication.jwtbearer.7.0.14.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.1.0\\microsoft.data.sqlclient.sni.runtime.5.1.0.nupkg.sha512",

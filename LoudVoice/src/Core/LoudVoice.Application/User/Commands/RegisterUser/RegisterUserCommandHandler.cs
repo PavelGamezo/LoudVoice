@@ -1,5 +1,4 @@
 ﻿using ErrorOr;
-using FluentResults;
 using LoudVoice.Application.Common.Authentications;
 using LoudVoice.Application.Common.Cqrs.Commands;
 using LoudVoice.Application.Common.DTOs;

@@ -3,7 +3,7 @@ using LoudVoice.Domain.Users.ValueObjects;
 
 namespace LoudVoice.Domain.Users.Entity
 {
-    public class User : AggregateRoot
+    public class User : AggregateRoot<Guid>
     {
         public Login Login { get; set; }
         public Email Email { get; set; }

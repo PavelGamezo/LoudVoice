@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace LoudVoice.Domain.Common
 {
-    public class AggregateRoot : BaseEntity
+    public class AggregateRoot<TId> : BaseEntity<TId>
     {
-        public AggregateRoot(Guid id) : base(id)
+        public AggregateRoot(TId id) : base(id)
         {
         }
     }

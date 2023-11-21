@@ -39,6 +39,9 @@ namespace LoudVoice.Infrastructure.EF.Repositories
         public async Task<User?> GetUserByLoginAsync(string login, CancellationToken cancellationToken) 
             => await _users.SingleOrDefaultAsync(user => user.Login == login);
 
+        public async Task<User?> GetUserByIdAsync(Guid userId, CancellationToken cancellationToken)
+            => await _users.SingleOrDefaultAsync(user => user.Id == userId);
+
         public async Task SaveAsync(CancellationToken cancellationToken)
         {
             await _dbContext.SaveChangesAsync(cancellationToken);

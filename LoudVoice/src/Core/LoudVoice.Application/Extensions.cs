@@ -15,7 +15,7 @@ namespace LoudVoice.Application
                 typeof(IPipelineBehavior<,>), 
                 typeof(ValidationBehavior<,>));
 
-            services.AddSingleton<IUserFactory, UserFactory>();
+            services.AddScoped<IUserFactory, UserFactory>();
 
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());

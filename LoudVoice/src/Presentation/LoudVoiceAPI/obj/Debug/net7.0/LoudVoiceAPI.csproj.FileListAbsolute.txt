@@ -91,3 +91,4 @@ D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Present
 D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Presentation\LoudVoiceAPI\bin\Debug\net7.0\FluentValidation.dll
 D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Presentation\LoudVoiceAPI\bin\Debug\net7.0\FluentValidation.AspNetCore.dll
 D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Presentation\LoudVoiceAPI\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Программирование\Pet-projects\LoudVoice\LoudVoice\src\Presentation\LoudVoiceAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
