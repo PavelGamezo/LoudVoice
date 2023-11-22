@@ -5,7 +5,7 @@ namespace LoudVoice.Domain.Compositions.ValueObjects
 {
     public sealed class ListensCount : ValueObject
     {
-        private uint Value { get; init; }
+        public uint Value { get; init; }
 
         public ListensCount(uint value) 
         {

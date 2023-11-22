@@ -1,6 +1,8 @@
 ﻿using ErrorOr;
 using LoudVoice.Domain.Common;
 using LoudVoice.Domain.Compositions.Errors;
+using LoudVoice.Domain.Users.Errors;
+using LoudVoice.Domain.Users.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,37 +13,32 @@ namespace LoudVoice.Domain.Compositions.ValueObjects
 {
     public sealed class CompositionUrl : ValueObject
     {
-        private string Value { get; init; }
+        public string Value { get; init; }
 
-        private CompositionUrl(string value)
+        public CompositionUrl(string value)
         {
             Value = value;
         }
 
-        public ErrorOr<CompositionUrl> Create(string url)
+        public static ErrorOr<CompositionUrl> Create(string email)
         {
-            if (string.IsNullOrEmpty(url))
+            if (string.IsNullOrEmpty(email))
             {
                 return CompositionsDomainErrors.EmptyUrl;
             }
 
-            return new CompositionUrl(url);
+            return new CompositionUrl(email);
         }
-
-        public override string ToString()
-            => Value;
 
         public override IEnumerable<object> GetEqualityComponents()
         {
             yield return Value;
         }
 
-        public static implicit operator CompositionUrl(string value) 
-            => new(value);
+        public static implicit operator CompositionUrl(string url) =>
+            new(url);
 
-        public static implicit operator string(CompositionUrl value)
-        {
-            return value.ToString();
-        }
+        public static implicit operator string(CompositionUrl url) =>
+            url.Value;
     }
 }

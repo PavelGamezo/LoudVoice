@@ -23,6 +23,8 @@ namespace LoudVoice.Domain.Performers.ValueObjects
             Value = value;
         }
 
+        public override string ToString() => Value;
+
         public override IEnumerable<object> GetEqualityComponents()
         {
             yield return Value;

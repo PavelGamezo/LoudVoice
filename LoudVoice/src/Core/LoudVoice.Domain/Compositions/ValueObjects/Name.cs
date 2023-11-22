@@ -6,7 +6,7 @@ namespace LoudVoice.Domain.Compositions.ValueObjects
 {
     public class Name : ValueObject
     {
-        private string Value { get; set; }
+        public string Value { get; set; }
 
         public Name(string value)
         {
@@ -19,6 +19,7 @@ namespace LoudVoice.Domain.Compositions.ValueObjects
             {
                 return CompositionsDomainErrors.EmptyName;
             }
+
             return new Name(name);
         }
 
@@ -27,13 +28,8 @@ namespace LoudVoice.Domain.Compositions.ValueObjects
             yield return Value;
         }
 
-        public override string ToString()
-        {
-            return Value;
-        }
-
         public static implicit operator string(Name name)
-            => name.ToString();
+            => name.Value;
 
         public static implicit operator Name(string name)
             => new(name);

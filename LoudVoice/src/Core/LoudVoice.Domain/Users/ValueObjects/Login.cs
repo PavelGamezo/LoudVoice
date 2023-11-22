@@ -18,7 +18,7 @@ namespace LoudVoice.Domain.Users.ValueObjects
         {
             if (string.IsNullOrEmpty(login))
             {
-                return DomainErrors.EmptyLogin;
+                return UserDomainErrors.EmptyLogin;
             }
 
             return new Login(login);

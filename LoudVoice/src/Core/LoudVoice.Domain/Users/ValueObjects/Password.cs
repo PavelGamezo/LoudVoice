@@ -23,7 +23,7 @@ namespace LoudVoice.Domain.Users.ValueObjects
         {
             if (string.IsNullOrEmpty(password))
             {
-                return DomainErrors.EmptyPassword;
+                return UserDomainErrors.EmptyPassword;
             }
 
             return new Password(password);

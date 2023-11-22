@@ -22,6 +22,58 @@ namespace LoudVoice.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("LoudVoice.Domain.Compositions.Entity.Composition", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<uint>("ListensCount")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("PerformerId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PerformerId");
+
+                    b.ToTable("Compositions");
+                });
+
+            modelBuilder.Entity("LoudVoice.Domain.Performers.Entity.Performer", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nickname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("Performers");
+                });
+
             modelBuilder.Entity("LoudVoice.Domain.Users.Entity.User", b =>
                 {
                     b.Property<Guid>("Id")
@@ -43,6 +95,38 @@ namespace LoudVoice.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users", (string)null);
+                });
+
+            modelBuilder.Entity("LoudVoice.Domain.Compositions.Entity.Composition", b =>
+                {
+                    b.HasOne("LoudVoice.Domain.Performers.Entity.Performer", "Performer")
+                        .WithMany("Compositions")
+                        .HasForeignKey("PerformerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Performer");
+                });
+
+            modelBuilder.Entity("LoudVoice.Domain.Performers.Entity.Performer", b =>
+                {
+                    b.HasOne("LoudVoice.Domain.Users.Entity.User", "User")
+                        .WithOne("Performer")
+                        .HasForeignKey("LoudVoice.Domain.Performers.Entity.Performer", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("LoudVoice.Domain.Performers.Entity.Performer", b =>
+                {
+                    b.Navigation("Compositions");
+                });
+
+            modelBuilder.Entity("LoudVoice.Domain.Users.Entity.User", b =>
+                {
+                    b.Navigation("Performer");
                 });
 #pragma warning restore 612, 618
         }

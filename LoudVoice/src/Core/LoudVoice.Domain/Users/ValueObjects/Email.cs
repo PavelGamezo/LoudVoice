@@ -23,7 +23,7 @@ namespace LoudVoice.Domain.Users.ValueObjects
         {
             if (string.IsNullOrEmpty(email)) 
             {
-                return DomainErrors.EmptyEmail;
+                return UserDomainErrors.EmptyEmail;
             }
 
             return new Email(email);

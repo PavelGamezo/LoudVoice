@@ -5,7 +5,7 @@ namespace LoudVoice.Domain.Performers.ValueObjects
 {
     public sealed class Description : ValueObject
     {
-        private string Value { get; init; }
+        public string Value { get; init; }
 
         public Description(string value)
         {
