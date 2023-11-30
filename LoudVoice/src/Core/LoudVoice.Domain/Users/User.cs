@@ -1,10 +1,10 @@
 ﻿using ErrorOr;
 using LoudVoice.Domain.Common;
-using LoudVoice.Domain.Performers.Entity;
+using LoudVoice.Domain.Performers;
 using LoudVoice.Domain.Users.Errors;
 using LoudVoice.Domain.Users.ValueObjects;
 
-namespace LoudVoice.Domain.Users.Entity
+namespace LoudVoice.Domain.Users
 {
     public class User : AggregateRoot<Guid>
     {
@@ -12,7 +12,7 @@ namespace LoudVoice.Domain.Users.Entity
         public Email Email { get; set; }
         public Password Password { get; set; }
 
-        public Performer? Performer { get; set; }
+        private Performer? Performer { get; set; }
 
         internal User(Guid id, string login, string email, string password) : base(id)
         {
@@ -26,14 +26,12 @@ namespace LoudVoice.Domain.Users.Entity
 
         }
 
-        public ErrorOr<Performer> AddPerformer(Performer performer)
+        public ErrorOr<Performer> GetPerformer(Guid performerId)
         {
-            if (Performer is not null)
+            if (Performer is null || Performer.Id != performerId)
             {
-                return UserDomainErrors.PerformerAlreadyExist;
+                return UserDomainErrors.PerformerNotExist;
             }
-
-            Performer = performer;
 
             return Performer;
         }

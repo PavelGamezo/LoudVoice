@@ -1,5 +1,5 @@
 ﻿using LoudVoice.Application.Common.Persistance;
-using LoudVoice.Domain.Users.Entity;
+using LoudVoice.Domain.Users;
 using LoudVoice.Infrastructure.EF.Contexts;
 using Microsoft.EntityFrameworkCore;
 using System;

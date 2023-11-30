@@ -1,26 +1,26 @@
 ﻿using ErrorOr;
 using LoudVoice.Domain.Common;
-using LoudVoice.Domain.Compositions.Errors;
+using LoudVoice.Domain.Performers.Errors;
 
 namespace LoudVoice.Domain.Compositions.ValueObjects
 {
-    public class Name : ValueObject
+    public class CompositionName : ValueObject
     {
         public string Value { get; set; }
 
-        public Name(string value)
+        public CompositionName(string value)
         {
             Value = value;
         }
 
-        public static ErrorOr<Name> Create(string name)
+        public static ErrorOr<CompositionName> Create(string name)
         {
             if (string.IsNullOrEmpty(name))
             {
                 return CompositionsDomainErrors.EmptyName;
             }
 
-            return new Name(name);
+            return new CompositionName(name);
         }
 
         public override IEnumerable<object> GetEqualityComponents()
@@ -28,10 +28,10 @@ namespace LoudVoice.Domain.Compositions.ValueObjects
             yield return Value;
         }
 
-        public static implicit operator string(Name name)
+        public static implicit operator string(CompositionName name)
             => name.Value;
 
-        public static implicit operator Name(string name)
+        public static implicit operator CompositionName(string name)
             => new(name);
     }
 }

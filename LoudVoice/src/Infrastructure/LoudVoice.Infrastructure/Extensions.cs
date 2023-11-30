@@ -31,7 +31,6 @@ namespace LoudVoice.Infrastructure
 
             services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
             services.AddSingleton<IUserRepository, UserRepository>();
-            services.AddSingleton<ICompositionRepository, CompositionRepository>();
             services.AddSingleton<IPerformerRepository, PerformerRepository>();
 
             return services;

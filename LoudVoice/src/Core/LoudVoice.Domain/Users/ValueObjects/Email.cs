@@ -29,6 +29,11 @@ namespace LoudVoice.Domain.Users.ValueObjects
             return new Email(email);
         }
 
+        public override string ToString()
+        {
+            return Value;
+        }
+
         public override IEnumerable<object> GetEqualityComponents()
         {
             yield return Value;

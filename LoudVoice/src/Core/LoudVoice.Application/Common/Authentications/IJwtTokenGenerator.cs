@@ -2,6 +2,6 @@
 {
     public interface IJwtTokenGenerator
     {
-        public string GenerateToken(Domain.Users.Entity.User user);
+        public string GenerateToken(Domain.Users.User user);
     }
 }

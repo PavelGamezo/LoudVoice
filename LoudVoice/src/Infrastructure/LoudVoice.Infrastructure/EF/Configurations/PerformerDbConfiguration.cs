@@ -1,15 +1,8 @@
-﻿using LoudVoice.Domain.Compositions.Entity;
-using LoudVoice.Domain.Performers.Entity;
+﻿using LoudVoice.Domain.Performers;
 using LoudVoice.Domain.Performers.ValueObjects;
-using LoudVoice.Domain.Users.Entity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LoudVoice.Infrastructure.EF.Configurations
 {

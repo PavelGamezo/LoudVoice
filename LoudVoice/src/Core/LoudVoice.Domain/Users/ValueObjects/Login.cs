@@ -24,6 +24,10 @@ namespace LoudVoice.Domain.Users.ValueObjects
             return new Login(login);
         }
 
+        public override string ToString()
+        {
+            return Value;
+        }
         public override IEnumerable<object> GetEqualityComponents()
         {
             yield return Value;

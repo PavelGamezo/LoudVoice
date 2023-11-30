@@ -1,13 +1,8 @@
-﻿using LoudVoice.Domain.Compositions.Entity;
-using LoudVoice.Domain.Compositions.ValueObjects;
+﻿using LoudVoice.Domain.Compositions.ValueObjects;
+using LoudVoice.Domain.Performers.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LoudVoice.Infrastructure.EF.Configurations
 {
@@ -20,11 +15,11 @@ namespace LoudVoice.Infrastructure.EF.Configurations
             var compositionUrlConverter = new ValueConverter<CompositionUrl, string>(url => url.Value,
                 url => CompositionUrl.Create(url).Value);
 
-            var nameConverter = new ValueConverter<Name, string>(name => name.Value,
-                name => Name.Create(name).Value);
+            var nameConverter = new ValueConverter<CompositionName, string>(name => name.Value,
+                name => CompositionName.Create(name).Value);
 
-            var listensCountConverter = new ValueConverter<ListensCount, uint>(listensCount => listensCount.Value,
-                listensCount => ListensCount.Create(listensCount).Value);
+            var listensCountConverter = new ValueConverter<CompositionListensCount, uint>(listensCount => listensCount.Value,
+                listensCount => CompositionListensCount.Create(listensCount).Value);
 
             builder.Property(composition => composition.Name)
                    .HasConversion(nameConverter);
@@ -33,6 +28,7 @@ namespace LoudVoice.Infrastructure.EF.Configurations
                    .HasConversion(compositionUrlConverter);
 
             builder.Property(composition => composition.ListensCount)
+                   .HasColumnName("ListensCount")
                    .HasConversion(listensCountConverter);
 
             builder.HasOne(composition => composition.Performer)

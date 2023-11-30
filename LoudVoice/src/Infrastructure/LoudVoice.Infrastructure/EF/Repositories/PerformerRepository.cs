@@ -1,12 +1,7 @@
 ﻿using LoudVoice.Application.Common.Persistance;
-using LoudVoice.Domain.Performers.Entity;
+using LoudVoice.Domain.Performers;
 using LoudVoice.Infrastructure.EF.Contexts;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LoudVoice.Infrastructure.EF.Repositories
 {
@@ -27,12 +22,12 @@ namespace LoudVoice.Infrastructure.EF.Repositories
             await SaveAsync(cancellationToken);
         }
 
-        public Task<Performer> GetPerformerById(Guid id, CancellationToken cancellationToken)
+        public Task<Performer> GetPerformerByIdAsync(Guid id, CancellationToken cancellationToken)
         {
             return _performers.FirstOrDefaultAsync(performer => performer.Id == id, cancellationToken);
         }
 
-        public Task<Performer> GetPerformerByNickname(string nickname, CancellationToken cancellationToken)
+        public Task<Performer> GetPerformerByNicknameAsync(string nickname, CancellationToken cancellationToken)
         {
             return _performers.FirstOrDefaultAsync(performer => performer.Nickname == nickname, cancellationToken);
         }

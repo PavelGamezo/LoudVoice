@@ -12,7 +12,7 @@ namespace LoudVoice.Domain.Users.Errors
         public static readonly Error EmptyEmail = Error.NotFound(
             code: "DomainError.EmptyEmail",
             description: "Email is required and can't be empty");
-
+        
         public static readonly Error EmptyLogin = Error.NotFound(
             code: "DomainError.EmptyLogin",
             description: "Login is required and can't be empty");
@@ -24,5 +24,9 @@ namespace LoudVoice.Domain.Users.Errors
         public static readonly Error PerformerAlreadyExist = Error.Conflict(
             code: "DomainError.PerformerAlreadyExist",
             description: "You have already registered as a performer");
+
+        public static readonly Error PerformerNotExist = Error.NotFound(
+            code: "DomainError.PerformerNotExist",
+            description: "Performer doesn't exist");
     }
 }

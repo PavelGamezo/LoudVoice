@@ -20,5 +20,9 @@ namespace LoudVoice.Application.Common.Errors
         public static readonly Error UserNotFound = Error.NotFound(
             code: "Application.UserNotFound",
             description: "User with entered email doesn't exist");
+
+        public static readonly Error PerformerWithDataExist = Error.Conflict(
+            code: "Application.PerformerWithDataExist",
+            description: "Performer with entered nickname has already exist");
     }
 }

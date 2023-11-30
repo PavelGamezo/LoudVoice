@@ -1,6 +1,6 @@
-﻿using LoudVoice.Domain.Compositions.Entity;
-using LoudVoice.Domain.Performers.Entity;
-using LoudVoice.Domain.Users.Entity;
+﻿using LoudVoice.Domain.Performers;
+using LoudVoice.Domain.Performers.Entities;
+using LoudVoice.Domain.Users;
 using LoudVoice.Infrastructure.EF.Configurations;
 using Microsoft.EntityFrameworkCore;
 

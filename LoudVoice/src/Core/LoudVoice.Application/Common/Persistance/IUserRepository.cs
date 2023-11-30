@@ -2,12 +2,12 @@
 {
     public interface IUserRepository
     {
-        Task<Domain.Users.Entity.User?> GetUserByEmailAsync(string email, CancellationToken cancellationToken);
-        Task<Domain.Users.Entity.User?> GetUserByLoginAsync(string login, CancellationToken cancellationToken);
-        Task<Domain.Users.Entity.User?> GetUserByIdAsync(Guid userId, CancellationToken cancellationToken);
-        Task AddAsync(Domain.Users.Entity.User user, CancellationToken cancellationToken);
-        Task UpdateAsync(Domain.Users.Entity.User user, CancellationToken cancellationToken);
-        Task DeleteAsync(Domain.Users.Entity.User user, CancellationToken cancellationToken);
+        Task<Domain.Users.User?> GetUserByEmailAsync(string email, CancellationToken cancellationToken);
+        Task<Domain.Users.User?> GetUserByLoginAsync(string login, CancellationToken cancellationToken);
+        Task<Domain.Users.User?> GetUserByIdAsync(Guid userId, CancellationToken cancellationToken);
+        Task AddAsync(Domain.Users.User user, CancellationToken cancellationToken);
+        Task UpdateAsync(Domain.Users.User user, CancellationToken cancellationToken);
+        Task DeleteAsync(Domain.Users.User user, CancellationToken cancellationToken);
         Task SaveAsync(CancellationToken cancellationToken);
     }
 }

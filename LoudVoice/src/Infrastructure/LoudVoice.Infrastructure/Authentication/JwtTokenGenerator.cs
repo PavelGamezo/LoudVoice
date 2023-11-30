@@ -1,6 +1,6 @@
 ﻿using LoudVoice.Application.Common.Authentications;
 using LoudVoice.Application.Common.Services;
-using LoudVoice.Domain.Users.Entity;
+using LoudVoice.Domain.Users;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -29,7 +29,7 @@ namespace LoudVoice.Infrastructure.Authentications
                     Encoding.UTF8.GetBytes(_jwtSettings.Secret)),
                 SecurityAlgorithms.HmacSha256);
 
-            var claims = new[]
+            var claims = new Claim[]
             {
                 new Claim(JwtRegisteredClaimNames.UniqueName, user.Login.ToString()),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),

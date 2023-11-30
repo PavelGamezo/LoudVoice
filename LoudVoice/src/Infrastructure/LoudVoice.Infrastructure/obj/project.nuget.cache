@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/Jg6aKBnD+RFNH2M0T+bM3nKHW7/uVy1lJ8ioVCggr9P/C+1tCmV7p6lo9mmAUVpqT1Bnwy+SLCaIxwbty2mkg==",
+  "dgSpecHash": "a3VlCMlTA7oy6yGfxBn+Yzg4zCRE0r+zhh9JlyvkeyWjkgl4XeEdY3BzAakL2SwPnvIws5yl8ZgnOldey5EXxg==",
   "success": true,
   "projectFilePath": "D:\\Программирование\\Pet-projects\\LoudVoice\\LoudVoice\\src\\Infrastructure\\LoudVoice.Infrastructure\\LoudVoice.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,8 @@
     "C:\\Users\\Lenovo\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\mapster\\7.4.0\\mapster.7.4.0.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\mapster.core\\1.2.1\\mapster.core.1.2.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

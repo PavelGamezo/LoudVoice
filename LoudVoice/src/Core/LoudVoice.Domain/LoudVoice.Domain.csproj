@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <Folder Include="Performers\Events\" />
+    <Folder Include="Users\Entities\" />
   </ItemGroup>
 
 </Project>

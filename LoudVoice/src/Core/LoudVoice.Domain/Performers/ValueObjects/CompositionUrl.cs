@@ -1,13 +1,6 @@
 ﻿using ErrorOr;
 using LoudVoice.Domain.Common;
-using LoudVoice.Domain.Compositions.Errors;
-using LoudVoice.Domain.Users.Errors;
-using LoudVoice.Domain.Users.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using LoudVoice.Domain.Performers.Errors;
 
 namespace LoudVoice.Domain.Compositions.ValueObjects
 {

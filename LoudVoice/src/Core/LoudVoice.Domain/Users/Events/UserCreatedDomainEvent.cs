@@ -1,5 +1,4 @@
 ﻿using LoudVoice.Domain.Common;
-using LoudVoice.Domain.Users.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;

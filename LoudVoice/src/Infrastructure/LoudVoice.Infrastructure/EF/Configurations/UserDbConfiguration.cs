@@ -1,4 +1,4 @@
-﻿using LoudVoice.Domain.Users.Entity;
+﻿using LoudVoice.Domain.Users;
 using LoudVoice.Domain.Users.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
